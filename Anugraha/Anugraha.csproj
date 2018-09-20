@@ -66,7 +66,12 @@
     <Compile Include="Migrations\201809201429356_UpdateHistory.Designer.cs">
       <DependentUpon>201809201429356_UpdateHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809201754116_Company.cs" />
+    <Compile Include="Migrations\201809201754116_Company.Designer.cs">
+      <DependentUpon>201809201754116_Company.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Anu_Company_Detail.cs" />
     <Compile Include="Model\Anu_Log_History.cs" />
     <Compile Include="Model\Anu_User.cs" />
     <Compile Include="Program.cs" />
@@ -85,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201809201429356_UpdateHistory.resx">
       <DependentUpon>201809201429356_UpdateHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809201754116_Company.resx">
+      <DependentUpon>201809201754116_Company.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

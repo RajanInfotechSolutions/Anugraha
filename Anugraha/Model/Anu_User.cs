@@ -13,6 +13,7 @@ namespace Anugraha.Model
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Anu_USERID { get; set; }
+        public int Anu_Company_Id { get; set; }
         public string Anu_USERNAME { get; set; }
         public string Anu_PASSWORD { get; set; }
         public string Anu_CONFIRM_PASSWORD { get; set; }
@@ -22,5 +23,8 @@ namespace Anugraha.Model
 
         [ForeignKey("Anu_LogID")]
         public virtual Anu_Log_History history { get; set; }
+
+        [ForeignKey("Anu_Company_Id")]
+        public virtual Anu_Company_Detail company { get; set; }
     }
 }
