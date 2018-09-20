@@ -7,13 +7,13 @@ namespace Anugraha.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Intial : IMigrationMetadata
+    public sealed partial class UpdateHistory : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Intial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateHistory));
         
         string IMigrationMetadata.Id
         {
-            get { return "201809191820500_Intial"; }
+            get { return "201809201429356_UpdateHistory"; }
         }
         
         string IMigrationMetadata.Source

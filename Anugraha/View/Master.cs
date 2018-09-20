@@ -10,27 +10,21 @@ using System.Windows.Forms;
 
 namespace Anugraha.View
 {
-    public partial class Login : Form
+    public partial class Master : Form
     {
-        public Login()
+        public Master()
         {
-
             InitializeComponent();
-            lblBilling.Text = "";
-            lblDate.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void Master_Load(object sender, EventArgs e)
         {
             ActiveForm.Text = "Anugraha Pazhamuthirsolai -" + " " + DateTime.Now.Year.ToString();
-
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Master master = new Master();
-            master.Show();
+            Application.Exit();
         }
     }
 }

@@ -19,7 +19,8 @@ namespace Anugraha.Model
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Anu_LogID { get; set; }
-        public DateTime Anu_LAST_LOGGED { get; set; }
+        public DateTime Anu_LAST_LOGGED_In { get; set; }
+        public DateTime Anu_LAST_LOGGED_Out { get; set; }
         public DateTime CreatedDate { get; set; }
         public string CreatedBy { get; set; }
 

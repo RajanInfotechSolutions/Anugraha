@@ -62,9 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201809191820500_Intial.cs" />
-    <Compile Include="Migrations\201809191820500_Intial.Designer.cs">
-      <DependentUpon>201809191820500_Intial.cs</DependentUpon>
+    <Compile Include="Migrations\201809201429356_UpdateHistory.cs" />
+    <Compile Include="Migrations\201809201429356_UpdateHistory.Designer.cs">
+      <DependentUpon>201809201429356_UpdateHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Anu_Log_History.cs" />
@@ -77,8 +77,14 @@
     <Compile Include="View\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\201809191820500_Intial.resx">
-      <DependentUpon>201809191820500_Intial.cs</DependentUpon>
+    <Compile Include="View\Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Master.Designer.cs">
+      <DependentUpon>Master.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\201809201429356_UpdateHistory.resx">
+      <DependentUpon>201809201429356_UpdateHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,9 +94,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Master.resx">
+      <DependentUpon>Master.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -107,7 +117,64 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpwd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p05w5tk2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sellers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Streamline-73_185093.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Checklist_clipboard_inventory_list_report_tasks_todo_1886533.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_vector_65_01_473776 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_round_trip_3383442.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

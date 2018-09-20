@@ -3,7 +3,7 @@ namespace Anugraha.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Intial : DbMigration
+    public partial class UpdateHistory : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,8 @@ namespace Anugraha.Migrations
                 c => new
                     {
                         Anu_LogID = c.Int(nullable: false, identity: true),
-                        Anu_LAST_LOGGED = c.DateTime(nullable: false),
+                        Anu_LAST_LOGGED_In = c.DateTime(nullable: false),
+                        Anu_LAST_LOGGED_Out = c.DateTime(nullable: false),
                         CreatedDate = c.DateTime(nullable: false),
                         CreatedBy = c.String(),
                     })
