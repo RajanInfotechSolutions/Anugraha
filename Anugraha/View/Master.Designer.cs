@@ -34,7 +34,6 @@
             this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.subCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gSTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +42,8 @@
             this.purchaseItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saleEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockInHandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,15 +51,10 @@
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MidPanel = new System.Windows.Forms.Panel();
-            this.saleEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.topMenu.SuspendLayout();
             this.MidPanel.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,7 +92,6 @@
             this.configurationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.companyToolStripMenuItem,
             this.categoryToolStripMenuItem,
-            this.subCategoryToolStripMenuItem,
             this.productToolStripMenuItem,
             this.gSTToolStripMenuItem,
             this.vendorToolStripMenuItem,
@@ -113,56 +108,54 @@
             this.companyToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sellers;
             this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
             this.companyToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.companyToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.companyToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.companyToolStripMenuItem.Text = "C&ompany";
+            this.companyToolStripMenuItem.Click += new System.EventHandler(this.companyToolStripMenuItem_Click);
             // 
             // categoryToolStripMenuItem
             // 
             this.categoryToolStripMenuItem.Image = global::Anugraha.Properties.Resources.marc;
             this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
             this.categoryToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.categoryToolStripMenuItem.Text = "C&ategory";
-            // 
-            // subCategoryToolStripMenuItem
-            // 
-            this.subCategoryToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sales;
-            this.subCategoryToolStripMenuItem.Name = "subCategoryToolStripMenuItem";
-            this.subCategoryToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.subCategoryToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
-            this.subCategoryToolStripMenuItem.Text = "Sub-Category";
+            this.categoryToolStripMenuItem.Click += new System.EventHandler(this.categoryToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_Streamline_73_185093;
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
             this.productToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.productToolStripMenuItem.Text = "Product";
+            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // gSTToolStripMenuItem
             // 
             this.gSTToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sale1;
             this.gSTToolStripMenuItem.Name = "gSTToolStripMenuItem";
             this.gSTToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.gSTToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.gSTToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.gSTToolStripMenuItem.Text = "GST";
+            this.gSTToolStripMenuItem.Visible = false;
             // 
             // vendorToolStripMenuItem
             // 
             this.vendorToolStripMenuItem.Image = global::Anugraha.Properties.Resources.Agent;
             this.vendorToolStripMenuItem.Name = "vendorToolStripMenuItem";
             this.vendorToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.vendorToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.vendorToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.vendorToolStripMenuItem.Text = "Vendor";
+            this.vendorToolStripMenuItem.Click += new System.EventHandler(this.vendorToolStripMenuItem_Click);
             // 
             // customerToolStripMenuItem
             // 
             this.customerToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_vector_65_01_473776__1_;
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
             this.customerToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.customerToolStripMenuItem.Text = "Customer";
+            this.customerToolStripMenuItem.Visible = false;
             // 
             // purchaseToolStripMenuItem
             // 
@@ -180,7 +173,8 @@
             this.purchaseItemToolStripMenuItem.Name = "purchaseItemToolStripMenuItem";
             this.purchaseItemToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.purchaseItemToolStripMenuItem.Size = new System.Drawing.Size(348, 26);
-            this.purchaseItemToolStripMenuItem.Text = "Purchase Item";
+            this.purchaseItemToolStripMenuItem.Text = "Purchase Entry";
+            this.purchaseItemToolStripMenuItem.Click += new System.EventHandler(this.purchaseItemToolStripMenuItem_Click);
             // 
             // purchaseReturnToolStripMenuItem
             // 
@@ -189,6 +183,7 @@
             this.purchaseReturnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.purchaseReturnToolStripMenuItem.Size = new System.Drawing.Size(348, 26);
             this.purchaseReturnToolStripMenuItem.Text = "Purchase Return";
+            this.purchaseReturnToolStripMenuItem.Click += new System.EventHandler(this.purchaseReturnToolStripMenuItem_Click);
             // 
             // salesToolStripMenuItem
             // 
@@ -199,6 +194,24 @@
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(102, 40);
             this.salesToolStripMenuItem.Text = "&Sales";
+            // 
+            // saleEntryToolStripMenuItem
+            // 
+            this.saleEntryToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sale;
+            this.saleEntryToolStripMenuItem.Name = "saleEntryToolStripMenuItem";
+            this.saleEntryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.saleEntryToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.saleEntryToolStripMenuItem.Text = "Sale Entry";
+            this.saleEntryToolStripMenuItem.Click += new System.EventHandler(this.saleEntryToolStripMenuItem_Click);
+            // 
+            // salesReturnToolStripMenuItem
+            // 
+            this.salesReturnToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_round_trip_3383442;
+            this.salesReturnToolStripMenuItem.Name = "salesReturnToolStripMenuItem";
+            this.salesReturnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.salesReturnToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.salesReturnToolStripMenuItem.Text = "Sales Return";
+            this.salesReturnToolStripMenuItem.Click += new System.EventHandler(this.salesReturnToolStripMenuItem_Click);
             // 
             // transactionToolStripMenuItem
             // 
@@ -239,6 +252,7 @@
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(90, 40);
             this.userToolStripMenuItem.Text = "&User";
+            this.userToolStripMenuItem.Visible = false;
             // 
             // logoutToolStripMenuItem
             // 
@@ -256,60 +270,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MidPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.MidPanel.BackgroundImage = global::Anugraha.Properties.Resources.p05w5tk2;
+            this.MidPanel.BackgroundImage = global::Anugraha.Properties.Resources.bg1;
             this.MidPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MidPanel.Controls.Add(this.tableLayoutPanel2);
+            this.MidPanel.Controls.Add(this.mainPanel);
             this.MidPanel.Location = new System.Drawing.Point(0, 43);
             this.MidPanel.Name = "MidPanel";
             this.MidPanel.Size = new System.Drawing.Size(1006, 676);
             this.MidPanel.TabIndex = 3;
             // 
-            // saleEntryToolStripMenuItem
+            // mainPanel
             // 
-            this.saleEntryToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sale;
-            this.saleEntryToolStripMenuItem.Name = "saleEntryToolStripMenuItem";
-            this.saleEntryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.saleEntryToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
-            this.saleEntryToolStripMenuItem.Text = "Sale Entry";
-            // 
-            // salesReturnToolStripMenuItem
-            // 
-            this.salesReturnToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_round_trip_3383442;
-            this.salesReturnToolStripMenuItem.Name = "salesReturnToolStripMenuItem";
-            this.salesReturnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.salesReturnToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
-            this.salesReturnToolStripMenuItem.Text = "Sales Return";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.031992F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.96801F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 7);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.70629F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(982, 217);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Anugraha.Properties.Resources.Banner;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(953, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.Location = new System.Drawing.Point(39, 40);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(943, 626);
+            this.mainPanel.TabIndex = 0;
             // 
             // Master
             // 
@@ -331,15 +309,11 @@
             this.topMenu.ResumeLayout(false);
             this.topMenu.PerformLayout();
             this.MidPanel.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel MidPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip topMenu;
         private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
@@ -351,7 +325,6 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem companyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem subCategoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gSTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendorToolStripMenuItem;
@@ -362,7 +335,7 @@
         private System.Windows.Forms.ToolStripMenuItem purchaseReturnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saleEntryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesReturnToolStripMenuItem;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel MidPanel;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }
