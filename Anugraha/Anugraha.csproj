@@ -118,6 +118,12 @@
     <Compile Include="View\Anu_Sales_Return.Designer.cs">
       <DependentUpon>Anu_Sales_Return.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Anu_Stock_InHand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Anu_Stock_InHand.Designer.cs">
+      <DependentUpon>Anu_Stock_InHand.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Anu_Vendor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Anu_Sales_Return.resx">
       <DependentUpon>Anu_Sales_Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Anu_Stock_InHand.resx">
+      <DependentUpon>Anu_Stock_InHand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Anu_Vendor.resx">
       <DependentUpon>Anu_Vendor.cs</DependentUpon>
