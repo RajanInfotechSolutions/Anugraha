@@ -225,5 +225,43 @@ namespace Anugraha.View
                 nt.BringToFront();
             }
         }
+
+        private void stockEntryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseOpeningForms();
+            if (!mainPanel.Controls.Contains(Anu_Stock_Entry.Instance))
+            {
+                mainPanel.Controls.Add(Anu_Stock_Entry.Instance);
+                Anu_Stock_Entry.Instance.Dock = DockStyle.Fill;
+                Anu_Stock_Entry.Instance.BringToFront();
+            }
+            else
+            {
+                CloseUserControl(Anu_Stock_Entry.Instance);
+                Anu_Stock_Entry nt = new Anu_Stock_Entry();
+                mainPanel.Controls.Add(nt);
+                nt.Dock = DockStyle.Fill;
+                nt.BringToFront();
+            }
+        }
+
+        private void stockInHandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseOpeningForms();
+            if (!mainPanel.Controls.Contains(Anu_Stock_InHand.Instance))
+            {
+                mainPanel.Controls.Add(Anu_Stock_InHand.Instance);
+                Anu_Stock_InHand.Instance.Dock = DockStyle.Fill;
+                Anu_Stock_InHand.Instance.BringToFront();
+            }
+            else
+            {
+                CloseUserControl(Anu_Stock_InHand.Instance);
+                Anu_Stock_InHand nt = new Anu_Stock_InHand();
+                mainPanel.Controls.Add(nt);
+                nt.Dock = DockStyle.Fill;
+                nt.BringToFront();
+            }
+        }
     }
 }

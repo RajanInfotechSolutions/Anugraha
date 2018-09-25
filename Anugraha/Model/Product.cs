@@ -10,6 +10,13 @@ namespace Anugraha.Model
 {
     public class Product
     {
+        public Product()
+        {
+            this.Carts = new HashSet<Anu_Purchase_Cart>();
+            this.pdetail = new HashSet<Anu_Purchase_Detail>();
+            this.orderdetails = new HashSet<Anu_Order_Detail>();
+            this.Anu_Cart = new HashSet<Anu_Cart>();
+        }
         [Key]
         public string Anu_Product_Id { get; set; }
         public string Anu_Category_Id { get; set; }
@@ -26,6 +33,14 @@ namespace Anugraha.Model
 
         [ForeignKey("Anu_Category_Id")]
         public virtual Anu_Category_Detail detail { get; set; }
+
+        public virtual ICollection<Anu_Purchase_Cart> Carts { get; set; }
+
+        public virtual ICollection<Anu_Purchase_Detail> pdetail { get; set; }
+
+        public virtual ICollection<Anu_Order_Detail> orderdetails { get; set; }
+
+        public virtual ICollection<Anu_Cart> Anu_Cart { get; set; }
 
     }
 

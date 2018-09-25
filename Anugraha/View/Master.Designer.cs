@@ -45,6 +45,7 @@
             this.saleEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockInHandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -216,12 +217,22 @@
             // transactionToolStripMenuItem
             // 
             this.transactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stockEntryToolStripMenuItem,
             this.stockInHandToolStripMenuItem,
             this.transactionToolStripMenuItem1});
             this.transactionToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_Checklist_clipboard_inventory_list_report_tasks_todo_1886533;
             this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
             this.transactionToolStripMenuItem.Size = new System.Drawing.Size(150, 40);
             this.transactionToolStripMenuItem.Text = "&Inventory";
+            // 
+            // stockEntryToolStripMenuItem
+            // 
+            this.stockEntryToolStripMenuItem.Image = global::Anugraha.Properties.Resources.stockentry;
+            this.stockEntryToolStripMenuItem.Name = "stockEntryToolStripMenuItem";
+            this.stockEntryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.stockEntryToolStripMenuItem.Size = new System.Drawing.Size(324, 26);
+            this.stockEntryToolStripMenuItem.Text = "Stock Entry";
+            this.stockEntryToolStripMenuItem.Click += new System.EventHandler(this.stockEntryToolStripMenuItem_Click);
             // 
             // stockInHandToolStripMenuItem
             // 
@@ -230,6 +241,7 @@
             this.stockInHandToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.stockInHandToolStripMenuItem.Size = new System.Drawing.Size(324, 26);
             this.stockInHandToolStripMenuItem.Text = "Stock In Hand";
+            this.stockInHandToolStripMenuItem.Click += new System.EventHandler(this.stockInHandToolStripMenuItem_Click);
             // 
             // transactionToolStripMenuItem1
             // 
@@ -280,9 +292,7 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.AutoSize = true;
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Location = new System.Drawing.Point(39, 40);
             this.mainPanel.Name = "mainPanel";
@@ -309,6 +319,7 @@
             this.topMenu.ResumeLayout(false);
             this.topMenu.PerformLayout();
             this.MidPanel.ResumeLayout(false);
+            this.MidPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,5 +348,6 @@
         private System.Windows.Forms.ToolStripMenuItem salesReturnToolStripMenuItem;
         private System.Windows.Forms.Panel MidPanel;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.ToolStripMenuItem stockEntryToolStripMenuItem;
     }
 }

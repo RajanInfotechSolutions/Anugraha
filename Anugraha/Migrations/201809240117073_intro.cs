@@ -3,7 +3,7 @@ namespace Anugraha.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Introduction : DbMigration
+    public partial class intro : DbMigration
     {
         public override void Up()
         {
@@ -96,6 +96,32 @@ namespace Anugraha.Migrations
                     })
                 .PrimaryKey(t => t.Anu_LogID);
             
+            CreateTable(
+                "dbo.Anu_Vendor_Detail",
+                c => new
+                    {
+                        Anu_Vendor_Id = c.String(nullable: false, maxLength: 128),
+                        Anu_Vendor_Company_Name = c.String(),
+                        Anu_Vendor_Company_Owner = c.String(),
+                        Anu_Vendor_Company_Address1 = c.String(),
+                        Anu_Vendor_Company_Address2 = c.String(),
+                        Anu_Vendor_Company_City = c.String(),
+                        Anu_Vendor_Company_State = c.String(),
+                        Anu_Vendor_Company_PinCode = c.String(),
+                        Anu_Vendor_Company_MobileNo = c.String(),
+                        Anu_Vendor_Company_Landline = c.String(),
+                        Anu_Vendor_Company_Email = c.String(),
+                        Anu_Vendor_Company_GST = c.String(),
+                        Anu_Vendor_Company_ACNO = c.String(),
+                        Anu_Vendor_Company_IFSC = c.String(),
+                        Anu_Vendor_IsActive = c.Boolean(nullable: false),
+                        Anu_Vendor_CreatedBy = c.String(),
+                        Anu_Vendor_CreatedDate = c.DateTime(nullable: false),
+                        Anu_Vendor_ModifiedBy = c.String(),
+                        Anu_Vendor_ModifiedDate = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.Anu_Vendor_Id);
+            
         }
         
         public override void Down()
@@ -106,6 +132,7 @@ namespace Anugraha.Migrations
             DropIndex("dbo.Anu_User", new[] { "Anu_LogID" });
             DropIndex("dbo.Anu_User", new[] { "Anu_Company_Id" });
             DropIndex("dbo.Products", new[] { "Anu_Category_Id" });
+            DropTable("dbo.Anu_Vendor_Detail");
             DropTable("dbo.Anu_Log_History");
             DropTable("dbo.Anu_User");
             DropTable("dbo.Anu_Company_Detail");

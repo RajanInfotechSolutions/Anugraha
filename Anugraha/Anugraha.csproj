@@ -43,10 +43,14 @@
     <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="PrinterUtility, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PrinterUtility.1.1.2\lib\PrinterUtility.dll</HintPath>
+    </Reference>
     <Reference Include="QRCoder, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\QRCoder.1.3.3\lib\net40\QRCoder.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,15 +68,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201809220640564_Introduction.cs" />
-    <Compile Include="Migrations\201809220640564_Introduction.Designer.cs">
-      <DependentUpon>201809220640564_Introduction.cs</DependentUpon>
+    <Compile Include="Migrations\201809240117073_intro.cs" />
+    <Compile Include="Migrations\201809240117073_intro.Designer.cs">
+      <DependentUpon>201809240117073_intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240314591_purchase.cs" />
+    <Compile Include="Migrations\201809240314591_purchase.Designer.cs">
+      <DependentUpon>201809240314591_purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240453338_purchaseCart.cs" />
+    <Compile Include="Migrations\201809240453338_purchaseCart.Designer.cs">
+      <DependentUpon>201809240453338_purchaseCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240530539_purchaseCartupdate.cs" />
+    <Compile Include="Migrations\201809240530539_purchaseCartupdate.Designer.cs">
+      <DependentUpon>201809240530539_purchaseCartupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240544048_purchaseCartupdate123.cs" />
+    <Compile Include="Migrations\201809240544048_purchaseCartupdate123.Designer.cs">
+      <DependentUpon>201809240544048_purchaseCartupdate123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240716567_stock.cs" />
+    <Compile Include="Migrations\201809240716567_stock.Designer.cs">
+      <DependentUpon>201809240716567_stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809240930143_stockupdate.cs" />
+    <Compile Include="Migrations\201809240930143_stockupdate.Designer.cs">
+      <DependentUpon>201809240930143_stockupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809250308045_Order.cs" />
+    <Compile Include="Migrations\201809250308045_Order.Designer.cs">
+      <DependentUpon>201809250308045_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809250317249_Cart.cs" />
+    <Compile Include="Migrations\201809250317249_Cart.Designer.cs">
+      <DependentUpon>201809250317249_Cart.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Anu_Cart.cs" />
     <Compile Include="Model\Anu_Category_Detail.cs" />
     <Compile Include="Model\Anu_Company_Detail.cs" />
     <Compile Include="Model\Anu_Log_History.cs" />
+    <Compile Include="Model\Anu_Order.cs" />
+    <Compile Include="Model\Anu_Order_Detail.cs" />
+    <Compile Include="Model\Anu_Purchase.cs" />
+    <Compile Include="Model\Anu_Purchase_Cart.cs" />
+    <Compile Include="Model\Anu_Purchase_Detail.cs" />
+    <Compile Include="Model\Anu_Stock.cs" />
+    <Compile Include="Model\Anu_Stock_Detail.cs" />
     <Compile Include="Model\Anu_User.cs" />
+    <Compile Include="Model\Anu_Vendor_Detail.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +163,12 @@
     <Compile Include="View\Anu_Sales_Return.Designer.cs">
       <DependentUpon>Anu_Sales_Return.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Anu_Stock_Entry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Anu_Stock_Entry.Designer.cs">
+      <DependentUpon>Anu_Stock_Entry.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Anu_Stock_InHand.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,8 +193,32 @@
     <Compile Include="View\Master.Designer.cs">
       <DependentUpon>Master.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\201809220640564_Introduction.resx">
-      <DependentUpon>201809220640564_Introduction.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809240117073_intro.resx">
+      <DependentUpon>201809240117073_intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240314591_purchase.resx">
+      <DependentUpon>201809240314591_purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240453338_purchaseCart.resx">
+      <DependentUpon>201809240453338_purchaseCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240530539_purchaseCartupdate.resx">
+      <DependentUpon>201809240530539_purchaseCartupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240544048_purchaseCartupdate123.resx">
+      <DependentUpon>201809240544048_purchaseCartupdate123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240716567_stock.resx">
+      <DependentUpon>201809240716567_stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240930143_stockupdate.resx">
+      <DependentUpon>201809240930143_stockupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809250308045_Order.resx">
+      <DependentUpon>201809250308045_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809250317249_Cart.resx">
+      <DependentUpon>201809250317249_Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -175,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Anu_Sales_Return.resx">
       <DependentUpon>Anu_Sales_Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Anu_Stock_Entry.resx">
+      <DependentUpon>Anu_Stock_Entry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Anu_Stock_InHand.resx">
       <DependentUpon>Anu_Stock_InHand.cs</DependentUpon>
@@ -300,6 +378,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_Print_1493286.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stockentry.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebJobs.Publish.2.0.0\build\Microsoft.Web.WebJobs.Publish.targets" Condition="Exists('..\packages\Microsoft.Web.WebJobs.Publish.2.0.0\build\Microsoft.Web.WebJobs.Publish.targets')" />

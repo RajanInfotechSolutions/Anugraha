@@ -125,7 +125,7 @@ namespace Anugraha.View
             {
                 e.Cancel = true;
                 txtMob.Focus();
-                errorProvider1.SetError(txtMob, "Owner Name is Empty");
+                errorProvider1.SetError(txtMob, "Mobile No is Empty");
             }
             else
             {

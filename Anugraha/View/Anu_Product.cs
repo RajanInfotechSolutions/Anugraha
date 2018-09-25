@@ -331,9 +331,19 @@ namespace Anugraha.View
                     MessageBox.Show(ex.Message);
                 }
             }
+            clearData();
 
         }
 
+        protected void clearData()
+        {
+            txtprdName.Text = "";
+            CategoryCombo.SelectedIndex = 0;
+            TypeCombo.SelectedIndex = 0;
+            txtprdRate.Text = "";
+            txtprdName.Focus();
+
+        }
 
         #endregion
 

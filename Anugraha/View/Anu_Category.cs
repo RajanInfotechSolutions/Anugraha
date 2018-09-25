@@ -125,25 +125,25 @@ namespace Anugraha.View
             categoryGrid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             categoryGrid.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic;
 
-            DataGridViewButtonColumn EditColumn = new DataGridViewButtonColumn();
-            EditColumn.Text = "EDIT";
-            EditColumn.Name = "EDIT";
-            EditColumn.HeaderText = "EDIT";
-            EditColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            EditColumn.DataPropertyName = "EDIT";
-            EditColumn.UseColumnTextForButtonValue = true;
-            EditColumn.DisplayIndex = 3;
-            categoryGrid.Columns.Add(EditColumn);
+            //DataGridViewButtonColumn EditColumn = new DataGridViewButtonColumn();
+            //EditColumn.Text = "EDIT";
+            //EditColumn.Name = "EDIT";
+            //EditColumn.HeaderText = "EDIT";
+            //EditColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //EditColumn.DataPropertyName = "EDIT";
+            //EditColumn.UseColumnTextForButtonValue = true;
+            //EditColumn.DisplayIndex = 3;
+            //categoryGrid.Columns.Add(EditColumn);
 
-            DataGridViewButtonColumn DeleteColumn = new DataGridViewButtonColumn();
-            DeleteColumn.Text = "DELETE";
-            DeleteColumn.Name = "DELETE";
-            DeleteColumn.HeaderText = "DELETE";
-            DeleteColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            DeleteColumn.DataPropertyName = "DELETE";
-            DeleteColumn.UseColumnTextForButtonValue = true;
-            DeleteColumn.DisplayIndex = 4;
-            categoryGrid.Columns.Add(DeleteColumn);
+            //DataGridViewButtonColumn DeleteColumn = new DataGridViewButtonColumn();
+            //DeleteColumn.Text = "DELETE";
+            //DeleteColumn.Name = "DELETE";
+            //DeleteColumn.HeaderText = "DELETE";
+            //DeleteColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //DeleteColumn.DataPropertyName = "DELETE";
+            //DeleteColumn.UseColumnTextForButtonValue = true;
+            //DeleteColumn.DisplayIndex = 4;
+            //categoryGrid.Columns.Add(DeleteColumn);
         }
         private void categoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
