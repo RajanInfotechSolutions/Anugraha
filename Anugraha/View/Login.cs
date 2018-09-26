@@ -28,9 +28,40 @@ namespace Anugraha.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Master master = new Master();
-            master.Show();
+            try
+            {
+                if (string.IsNullOrEmpty(txtUserName.Text.Trim()) && string.IsNullOrEmpty(txtPassword.Text.Trim()))
+                {
+                    if (string.IsNullOrEmpty(txtUserName.Text.Trim()))
+                    {
+                        errorProvider1.SetError(txtUserName, "User Name is Empty");
+                        txtUserName.Focus();
+                    }
+                    if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
+                    {
+                        errorProvider1.SetError(txtPassword, "User Name is Empty");
+                        txtUserName.Focus();
+                    }
+                }
+                else
+                {
+                    if(txtUserName.Text == "Admin" && txtPassword.Text =="Admin")
+                    {
+                        this.Hide();
+                        Master master = new Master();
+                        master.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter Correct Username  & Password");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
     }
 }

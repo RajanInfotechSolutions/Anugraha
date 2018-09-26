@@ -41,6 +41,9 @@ namespace Anugraha.View
         public int TotalQty;
         private StreamReader streamToPrint;
         private Font printFont;
+        private PrintDocument printDocument = new PrintDocument();
+        private static String RECEIPT = Environment.CurrentDirectory + @"\comprovantes\comprovante.txt";
+        private String stringToPrint = "";
         public Anu_Sales_Entry()
         {
             InitializeComponent();
@@ -318,7 +321,7 @@ namespace Anugraha.View
                               Quantity = a.Anu_cart_Qty + " " + a.Anu_cart_Type.ToString(),
                               Rate = a.Anu_cart_Rate
                           };
-                cartGrid.DataSource = grd.ToList();
+                cartGrid.DataSource = grd.OrderBy(a=>a.Product).ToList();
 
                 cartGrid.Columns[0].Visible = false;
 
@@ -337,6 +340,7 @@ namespace Anugraha.View
                 txtCat.Text = "";
                 txtRate.Text = "";
                 txtQty.Text = "";
+                lblStock.Text = "";
                 prdCombo.Focus();
                 TotalQty = _context.Anu_Carts.Count();
             }
@@ -419,14 +423,23 @@ namespace Anugraha.View
                     _context.SaveChanges();
 
 
+                    var stock = _context.Anu_Stocks.Include(a=>a.stdetail).Where(a => a.Anu_Product_Id.Contains(item.Anu_Product_Id)).SingleOrDefault();
+                    stock.Anu_Stock_Qty = stock.Anu_Stock_Qty - Convert.ToDecimal(item.Anu_cart_Qty);
+                    _context.SaveChanges();
+                    
+
                     Anu_Cart crt = _context.Anu_Carts.Find(item.Anu_Cart_Id);
                     _context.Anu_Carts.Remove(crt);
                     _context.SaveChanges();
                 }
 
                 //PrintReceipt(lblBillNo.Text);
+                //printTest();
+                Printdoc();
 
-                printTest();
+                Init();
+
+                //printTest();
 
             }
             catch (Exception ex)
@@ -434,56 +447,70 @@ namespace Anugraha.View
                 MessageBox.Show(ex.Message);
             }
         }
-        private void printTest()
+
+
+        private void Printdoc()
         {
-            streamToPrint = new StreamReader
-               ("C:\\print.txt");
-            try
-            {
-                printFont = new Font("Arial", 10);
-                PrintDocument pd = new PrintDocument();
-                pd.PrintPage += new PrintPageEventHandler
-                   (this.pd_PrintPage);
-                pd.Print();
-            }
-            finally
-            {
-                streamToPrint.Close();
-            }
+            FileStream fs = new FileStream(@"C:\print.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs);
+            stringToPrint = sr.ReadToEnd();
+            var Printers = System.Drawing.Printing.PrinterSettings.InstalledPrinters;
+            printDocument.PrinterSettings.PrinterName = "EPSON TM-T82 Receipt";
+            printDocument.PrintPage += PrintDocument_PrintPage;
+            printDocument.Print();
+            sr.Close();
+            fs.Close();
+
 
         }
-        private void pd_PrintPage(object sender, PrintPageEventArgs ev)
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            float linesPerPage = 0;
-            float yPos = 0;
-            int count = 0;
-            float leftMargin = ev.MarginBounds.Left;
-            float topMargin = ev.MarginBounds.Top;
-            string line = null;
+            Graphics graphics = e.Graphics;
+            Font regular = new Font(FontFamily.GenericSansSerif, 9.0f, FontStyle.Regular);
+            Font Title = new Font(FontFamily.GenericSerif, 9.0f, FontStyle.Bold);
+            Font Head = new Font(FontFamily.GenericSerif, 11.0f, FontStyle.Bold);
+            Font Head1 = new Font(FontFamily.GenericSerif, 12.0f, FontStyle.Bold);
+            Font Normal = new Font(FontFamily.GenericSerif, 10.0f, FontStyle.Regular);
+            Font bold = new Font(FontFamily.GenericSansSerif, 8.0f, FontStyle.Bold);
 
-            // Calculate the number of lines per page.
-            linesPerPage = ev.MarginBounds.Height /
-               printFont.GetHeight(ev.Graphics);
 
-            // Print each line of the file.
-            while (count < linesPerPage &&
-               ((line = streamToPrint.ReadLine()) != null))
+            graphics.DrawString("ANUGRAHA PAZHAMUTHIRSOLAI", Head1, Brushes.Black, 5, 10);
+            graphics.DrawString("Railway Main Road,Near Mamallan Nagar,", Normal, Brushes.Black, 15, 30);
+            graphics.DrawString("Kanchipuram - 631 501.", Normal, Brushes.Black, 15, 50);
+            graphics.DrawString("Mobile: +91 - 9444075429 , 9698112138 ", regular, Brushes.Black, 15, 70);
+            graphics.DrawString("........................................................................................................ ", regular, Brushes.Black, 10, 90);
+            graphics.DrawString("CASH BILL", Head, Brushes.Black, 90, 110);
+            graphics.DrawString("........................................................................................................ ", regular, Brushes.Black, 10, 130);
+
+            var orders = _context.Anu_Order_Details.Include(c => c.order).Include(d=>d.product).Where(a => a.Anu_Order_Id == lblBillNo.Text).ToList();
+            graphics.DrawString("BILL No:" + lblBillNo.Text, Normal, Brushes.Black, 10, 150);
+            graphics.DrawString("Date:" + lblBillDate.Text, Normal, Brushes.Black, 10, 170);
+
+            graphics.DrawString("PRODUCT               QTY          AMOUNT", Normal, Brushes.Black, 10, 190);
+
+            float m = 0;
+            for (int i = 0; i < orders.Count; i++)
             {
-                yPos = topMargin + (count *
-                   printFont.GetHeight(ev.Graphics));
-                ev.Graphics.DrawString(line, printFont, Brushes.Black,
-                   leftMargin, yPos, new StringFormat());
-                count++;
+                m = 210 + i * 20;
+                graphics.DrawString(orders[i].product.Anu_Product_Name + "            "+ orders[i].Anu_Order_Detail_Qty + "             " + orders[i].Anu_Order_Detail_Rate, Normal, Brushes.Black, 10, m);
             }
 
-            // If more lines exist, print another page.
-            if (line != null)
-                ev.HasMorePages = true;
-            else
-                ev.HasMorePages = false;
+            var ord = _context.Anu_Orders.Where(a => a.Anu_Order_Id == lblBillNo.Text).SingleOrDefault();
+            graphics.DrawString("Total Amount:" + ord.Anu_Order_TotalAmount, Normal, Brushes.Black, 90, m);
+
+            ord.Anu_Order_Status = Status.Paid;
+            _context.SaveChanges();
+
+           
+
+
+            regular.Dispose();
+            bold.Dispose();
+
+            // Check to see if more pages are to be printed.
+            //e.HasMorePages = (orderdetails.Count > 20);
         }
-
-
 
         private void PrintReceipt(string invoiceNo)
         {
@@ -492,7 +519,8 @@ namespace Anugraha.View
                               select a;
 
             PrinterUtility.EscPosEpsonCommands.EscPosEpson obj = new PrinterUtility.EscPosEpsonCommands.EscPosEpson();
-            var BytesValue = GetLogo("");
+            Byte[] BytesValue = new Byte[64];
+
             BytesValue = PrintExtensions.AddBytes(BytesValue, obj.Separator());
             BytesValue = PrintExtensions.AddBytes(BytesValue, Encoding.ASCII.GetBytes("Cash Bill\n"));
             BytesValue = PrintExtensions.AddBytes(BytesValue, obj.Alignment.Left());
@@ -500,10 +528,13 @@ namespace Anugraha.View
             BytesValue = PrintExtensions.AddBytes(BytesValue, Encoding.ASCII.GetBytes("Date.'" + orderdetail.FirstOrDefault().order.Anu_Order_OrderDate));
             BytesValue = PrintExtensions.AddBytes(BytesValue, Encoding.ASCII.GetBytes("Item             Qty             Amount"));
             BytesValue = PrintExtensions.AddBytes(BytesValue, obj.Separator());
-            foreach (var item in orderdetail)
-            {
-                BytesValue = PrintExtensions.AddBytes(BytesValue, string.Format(item.product.Anu_Product_Name, item.Anu_Order_Detail_Qty, item.Anu_Order_Detail_Rate));
-            }
+            BytesValue = PrintExtensions.AddBytes(BytesValue, string.Format("{0,-40},{1,6},{2,9},{3,9:N2}\n", "item 1", 12, 11, 144.00));
+            BytesValue = PrintExtensions.AddBytes(BytesValue, string.Format("{0,-40},{1,6},{2,9},{3,9:N2}\n", "item 1", 12, 11, 144.00));
+
+            //foreach (var item in orderdetail)
+            //{
+            //    BytesValue = PrintExtensions.AddBytes(BytesValue, string.Format(item.product.Anu_Product_Name, item.Anu_Order_Detail_Qty, item.Anu_Order_Detail_Rate));
+            //}
             BytesValue = PrintExtensions.AddBytes(BytesValue, obj.Alignment.Right());
             BytesValue = PrintExtensions.AddBytes(BytesValue, Encoding.ASCII.GetBytes("Total"));
             BytesValue = PrintExtensions.AddBytes(BytesValue, Encoding.ASCII.GetBytes(orderdetail.SingleOrDefault().order.Anu_Order_TotalAmount.ToString()));
@@ -515,14 +546,14 @@ namespace Anugraha.View
             BytesValue = PrintExtensions.AddBytes(BytesValue, "-------------------Thanking you------------------\n");
             BytesValue = PrintExtensions.AddBytes(BytesValue, obj.Alignment.Left());
             BytesValue = PrintExtensions.AddBytes(BytesValue, Cutpage());
-            var printer = System.Drawing.Printing.PrinterSettings.InstalledPrinters.ToString();
-            //BytesValue = PrintExtensions.AddBytes(BytesValue, System.Drawing.Printing.PrinterSettings.InstalledPrinters.ToString());
+            //var printer = System.Drawing.Printing.PrinterSettings.InstalledPrinters.ToString();
+            BytesValue = PrintExtensions.AddBytes(BytesValue, System.Drawing.Printing.PrinterSettings.InstalledPrinters.ToString());
         }
 
         public byte[] Cutpage()
         {
             List<byte> oby = new List<byte>();
-            oby.Add(Convert.ToByte(Convert.ToChar(0x10)));
+            oby.Add(Convert.ToByte(Convert.ToChar(0x1D)));
             oby.Add(Convert.ToByte("V"));
             oby.Add((byte)66);
             oby.Add((byte)3);
@@ -530,40 +561,40 @@ namespace Anugraha.View
 
         }
 
-        public byte[] GetLogo(string Path)
-        {
-            List<byte> oby = new List<byte>();
-            if (!File.Exists(Path))
-            {
-                return null;
-            }
-            Bitmap data = GetBitmapData(Path);
-            //BitArray dots = data.Dots;
-            byte[] Width = BitConverter.GetBytes(data.Width);
+        //public byte[] GetLogo(string Path)
+        //{
+        //    List<byte> oby = new List<byte>();
+        //    if (!File.Exists(Path))
+        //    {
+        //        return null;
+        //    }
+        //    //Bitmap data = GetBitmapData(Path);
+        //    //BitArray dots = data.Dots;
+        //    byte[] Width = BitConverter.GetBytes(data.Width);
 
-            int Offset = 0;
-            MemoryStream ms = new MemoryStream();
-            oby.Add(Convert.ToByte(Convert.ToChar(0x10)));
-            oby.Add(Convert.ToByte('@'));
-            oby.Add(Convert.ToByte(Convert.ToChar(0x10)));
-            oby.Add(Convert.ToByte('3'));
-            oby.Add((byte)24);
+        //    int Offset = 0;
+        //    MemoryStream ms = new MemoryStream();
+        //    oby.Add(Convert.ToByte(Convert.ToChar(0x1B)));
+        //    oby.Add(Convert.ToByte('@'));
+        //    oby.Add(Convert.ToByte(Convert.ToChar(0x1B)));
+        //    oby.Add(Convert.ToByte('3'));
+        //    oby.Add((byte)24);
 
-            while (Offset < data.Height)
-            {
-                oby.Add(Convert.ToByte(Convert.ToChar(0x10)));
-            }
+        //    while (Offset < data.Height)
+        //    {
+        //        oby.Add(Convert.ToByte(Convert.ToChar(0x1B)));
+        //    }
 
-            return oby.ToArray();
+        //    return oby.ToArray();
 
-        }
+        //}
 
-        public Bitmap GetBitmapData(string bmpFiileName)
-        {
-            String Path = bmpFiileName;
-            Bitmap Bitmap = new Bitmap(bmpFiileName);
-            return Bitmap;
-        }
+        //public Bitmap GetBitmapData(string bmpFiileName)
+        //{
+        //    byte[] imgArray = File.ReadAllBytes(bmpFiileName);
+        //    //return new Bitmap(imgArray, "image/jpg");
+        //    return imgArray;
+        //}
 
 
         public class BitmapData
@@ -573,6 +604,10 @@ namespace Anugraha.View
                 get; set;
             }
             public int Height
+            {
+                get; set;
+            }
+            public int Width
             {
                 get; set;
             }

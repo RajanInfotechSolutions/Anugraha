@@ -41,14 +41,15 @@
             this.purchaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saleEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockInHandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saleEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dailySaleReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MidPanel = new System.Windows.Forms.Panel();
@@ -76,8 +77,8 @@
             this.topMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configurationToolStripMenuItem,
             this.purchaseToolStripMenuItem,
-            this.salesToolStripMenuItem,
             this.transactionToolStripMenuItem,
+            this.salesToolStripMenuItem,
             this.reportToolStripMenuItem,
             this.userToolStripMenuItem,
             this.logoutToolStripMenuItem});
@@ -186,34 +187,6 @@
             this.purchaseReturnToolStripMenuItem.Text = "Purchase Return";
             this.purchaseReturnToolStripMenuItem.Click += new System.EventHandler(this.purchaseReturnToolStripMenuItem_Click);
             // 
-            // salesToolStripMenuItem
-            // 
-            this.salesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saleEntryToolStripMenuItem,
-            this.salesReturnToolStripMenuItem});
-            this.salesToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sale;
-            this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
-            this.salesToolStripMenuItem.Size = new System.Drawing.Size(102, 40);
-            this.salesToolStripMenuItem.Text = "&Sales";
-            // 
-            // saleEntryToolStripMenuItem
-            // 
-            this.saleEntryToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sale;
-            this.saleEntryToolStripMenuItem.Name = "saleEntryToolStripMenuItem";
-            this.saleEntryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.saleEntryToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
-            this.saleEntryToolStripMenuItem.Text = "Sale Entry";
-            this.saleEntryToolStripMenuItem.Click += new System.EventHandler(this.saleEntryToolStripMenuItem_Click);
-            // 
-            // salesReturnToolStripMenuItem
-            // 
-            this.salesReturnToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_round_trip_3383442;
-            this.salesReturnToolStripMenuItem.Name = "salesReturnToolStripMenuItem";
-            this.salesReturnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.salesReturnToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
-            this.salesReturnToolStripMenuItem.Text = "Sales Return";
-            this.salesReturnToolStripMenuItem.Click += new System.EventHandler(this.salesReturnToolStripMenuItem_Click);
-            // 
             // transactionToolStripMenuItem
             // 
             this.transactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -251,12 +224,50 @@
             this.transactionToolStripMenuItem1.Size = new System.Drawing.Size(324, 26);
             this.transactionToolStripMenuItem1.Text = "Payment";
             // 
+            // salesToolStripMenuItem
+            // 
+            this.salesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saleEntryToolStripMenuItem,
+            this.salesReturnToolStripMenuItem});
+            this.salesToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sale;
+            this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
+            this.salesToolStripMenuItem.Size = new System.Drawing.Size(102, 40);
+            this.salesToolStripMenuItem.Text = "&Sales";
+            // 
+            // saleEntryToolStripMenuItem
+            // 
+            this.saleEntryToolStripMenuItem.Image = global::Anugraha.Properties.Resources.sale;
+            this.saleEntryToolStripMenuItem.Name = "saleEntryToolStripMenuItem";
+            this.saleEntryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.saleEntryToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.saleEntryToolStripMenuItem.Text = "Sale Entry";
+            this.saleEntryToolStripMenuItem.Click += new System.EventHandler(this.saleEntryToolStripMenuItem_Click);
+            // 
+            // salesReturnToolStripMenuItem
+            // 
+            this.salesReturnToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_round_trip_3383442;
+            this.salesReturnToolStripMenuItem.Name = "salesReturnToolStripMenuItem";
+            this.salesReturnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.salesReturnToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.salesReturnToolStripMenuItem.Text = "Sales Return";
+            this.salesReturnToolStripMenuItem.Click += new System.EventHandler(this.salesReturnToolStripMenuItem_Click);
+            // 
             // reportToolStripMenuItem
             // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dailySaleReportToolStripMenuItem});
             this.reportToolStripMenuItem.Image = global::Anugraha.Properties.Resources.report;
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(114, 40);
             this.reportToolStripMenuItem.Text = "&Report";
+            // 
+            // dailySaleReportToolStripMenuItem
+            // 
+            this.dailySaleReportToolStripMenuItem.Image = global::Anugraha.Properties.Resources.if_Checklist_clipboard_inventory_list_report_tasks_todo_1886533;
+            this.dailySaleReportToolStripMenuItem.Name = "dailySaleReportToolStripMenuItem";
+            this.dailySaleReportToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.dailySaleReportToolStripMenuItem.Text = "Daily Sale Report";
+            this.dailySaleReportToolStripMenuItem.Click += new System.EventHandler(this.dailySaleReportToolStripMenuItem_Click);
             // 
             // userToolStripMenuItem
             // 
@@ -349,5 +360,6 @@
         private System.Windows.Forms.Panel MidPanel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.ToolStripMenuItem stockEntryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dailySaleReportToolStripMenuItem;
     }
 }

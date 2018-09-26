@@ -55,12 +55,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -162,7 +162,7 @@
             this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(3, 6);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(220, 22);
+            this.label18.Size = new System.Drawing.Size(219, 22);
             this.label18.TabIndex = 3;
             this.label18.Text = "RECEIVED AMOUNT";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -174,7 +174,7 @@
             this.label19.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(3, 42);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(220, 22);
+            this.label19.Size = new System.Drawing.Size(219, 22);
             this.label19.TabIndex = 4;
             this.label19.Text = "REMAINING AMOUNT";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -184,9 +184,9 @@
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(229, 6);
+            this.label25.Location = new System.Drawing.Point(228, 6);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(183, 22);
+            this.label25.Size = new System.Drawing.Size(184, 22);
             this.label25.TabIndex = 5;
             this.label25.Text = "0.00";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,9 +196,9 @@
             this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(229, 42);
+            this.label26.Location = new System.Drawing.Point(228, 42);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(183, 22);
+            this.label26.Size = new System.Drawing.Size(184, 22);
             this.label26.TabIndex = 6;
             this.label26.Text = "0.00";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -363,10 +363,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(888, 278);
             this.dataGridView1.TabIndex = 0;
@@ -426,6 +430,15 @@
             this.label5.Text = "09/22/2018";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(147, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(251, 30);
+            this.textBox1.TabIndex = 4;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
@@ -484,15 +497,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 30);
-            this.textBox1.TabIndex = 4;
             // 
             // Anu_Sales_Return
             // 

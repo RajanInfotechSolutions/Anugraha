@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anugraha", "Anugraha\Anugraha.csproj", "{79254F9C-1793-4214-84D6-CF51885685FB}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AnuSetup", "AnuSetup\AnuSetup.vdproj", "{8D0F195D-2CDC-4EC4-8796-CECB01458A94}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +15,6 @@ Global
 		{79254F9C-1793-4214-84D6-CF51885685FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79254F9C-1793-4214-84D6-CF51885685FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79254F9C-1793-4214-84D6-CF51885685FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D0F195D-2CDC-4EC4-8796-CECB01458A94}.Debug|Any CPU.ActiveCfg = Debug
-		{8D0F195D-2CDC-4EC4-8796-CECB01458A94}.Debug|Any CPU.Build.0 = Debug
-		{8D0F195D-2CDC-4EC4-8796-CECB01458A94}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

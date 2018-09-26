@@ -112,14 +112,14 @@ namespace Anugraha.View
             categoryGrid.Columns[0].Visible = false;
 
             categoryGrid.Columns[1].HeaderText = "CATEGORY NAME";
-            categoryGrid.Columns[1].Width = 800;
+            //categoryGrid.Columns[1].Width = 800;
             categoryGrid.Columns[1].ToolTipText = "CATEGORY NAME";
             categoryGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             categoryGrid.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             categoryGrid.Columns[1].SortMode = DataGridViewColumnSortMode.Automatic;
 
             categoryGrid.Columns[2].HeaderText = "CATEGORY CODE";
-            categoryGrid.Columns[2].Width = 800;
+            //categoryGrid.Columns[2].Width = 800;
             categoryGrid.Columns[2].ToolTipText = "CATEGORY CODE";
             categoryGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             categoryGrid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;

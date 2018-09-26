@@ -306,10 +306,14 @@
             // 
             // cartGrd
             // 
+            this.cartGrd.AllowUserToAddRows = false;
+            this.cartGrd.AllowUserToDeleteRows = false;
+            this.cartGrd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.cartGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cartGrd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cartGrd.Location = new System.Drawing.Point(3, 3);
             this.cartGrd.Name = "cartGrd";
+            this.cartGrd.ReadOnly = true;
             this.cartGrd.RowTemplate.Height = 24;
             this.cartGrd.Size = new System.Drawing.Size(877, 198);
             this.cartGrd.TabIndex = 0;

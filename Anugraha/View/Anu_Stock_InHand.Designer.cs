@@ -34,20 +34,20 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.stockGrid = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtsrc = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.stockGrid = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stockGrid)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -117,6 +117,61 @@
             this.panel2.Size = new System.Drawing.Size(920, 634);
             this.panel2.TabIndex = 4;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.38813F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.61187F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.btnClose, 1, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 535);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 40);
+            this.tableLayoutPanel4.TabIndex = 3;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnClose.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::Anugraha.Properties.Resources.if_free_09_4630171;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(751, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(122, 34);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "Cancel";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.stockGrid, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 52);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(900, 477);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // stockGrid
+            // 
+            this.stockGrid.AllowUserToAddRows = false;
+            this.stockGrid.AllowUserToDeleteRows = false;
+            this.stockGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.stockGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stockGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stockGrid.Location = new System.Drawing.Point(3, 3);
+            this.stockGrid.Name = "stockGrid";
+            this.stockGrid.ReadOnly = true;
+            this.stockGrid.RowTemplate.Height = 24;
+            this.stockGrid.Size = new System.Drawing.Size(894, 471);
+            this.stockGrid.TabIndex = 0;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
@@ -158,60 +213,6 @@
             this.txtsrc.TabIndex = 2;
             this.txtsrc.TextChanged += new System.EventHandler(this.txtsrc_TextChanged);
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.stockGrid, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 52);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(900, 477);
-            this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // stockGrid
-            // 
-            this.stockGrid.AllowUserToAddRows = false;
-            this.stockGrid.AllowUserToDeleteRows = false;
-            this.stockGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.stockGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stockGrid.Location = new System.Drawing.Point(3, 3);
-            this.stockGrid.Name = "stockGrid";
-            this.stockGrid.ReadOnly = true;
-            this.stockGrid.RowTemplate.Height = 24;
-            this.stockGrid.Size = new System.Drawing.Size(894, 471);
-            this.stockGrid.TabIndex = 0;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.38813F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.61187F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.btnClose, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 535);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 40);
-            this.tableLayoutPanel4.TabIndex = 3;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnClose.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::Anugraha.Properties.Resources.if_free_09_4630171;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(751, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(122, 34);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Cancel";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -227,11 +228,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stockGrid)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

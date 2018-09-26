@@ -36,44 +36,44 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblBillDate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblBillNo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblBillDate = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.prdCombo = new System.Windows.Forms.ComboBox();
-            this.TypeCombo = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCat = new System.Windows.Forms.TextBox();
-            this.txtRate = new System.Windows.Forms.TextBox();
-            this.txtQty = new System.Windows.Forms.TextBox();
             this.lblStock = new System.Windows.Forms.Label();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.txtRate = new System.Windows.Forms.TextBox();
+            this.txtCat = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.TypeCombo = new System.Windows.Forms.ComboBox();
+            this.prdCombo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cartGrid = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.GrandTotal = new System.Windows.Forms.Label();
-            this.lblRoundOff = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.lblGSt = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.lblGSt = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.lblRoundOff = new System.Windows.Forms.Label();
+            this.GrandTotal = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtReceived = new System.Windows.Forms.TextBox();
-            this.lblRemain = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblRemain = new System.Windows.Forms.Label();
+            this.txtReceived = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -169,28 +169,16 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(897, 34);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // lblBillDate
+            // lblBillNo
             // 
-            this.lblBillDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBillDate.AutoSize = true;
-            this.lblBillDate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBillDate.Location = new System.Drawing.Point(665, 5);
-            this.lblBillDate.Name = "lblBillDate";
-            this.lblBillDate.Size = new System.Drawing.Size(229, 23);
-            this.lblBillDate.TabIndex = 3;
-            this.lblBillDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(498, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 22);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "INVOICE DATE";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblBillNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBillNo.AutoSize = true;
+            this.lblBillNo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBillNo.Location = new System.Drawing.Point(147, 5);
+            this.lblBillNo.Name = "lblBillNo";
+            this.lblBillNo.Size = new System.Drawing.Size(251, 23);
+            this.lblBillNo.TabIndex = 2;
+            this.lblBillNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -204,16 +192,28 @@
             this.label2.Text = "INVOICE NO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblBillNo
+            // label3
             // 
-            this.lblBillNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBillNo.AutoSize = true;
-            this.lblBillNo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBillNo.Location = new System.Drawing.Point(147, 5);
-            this.lblBillNo.Name = "lblBillNo";
-            this.lblBillNo.Size = new System.Drawing.Size(251, 23);
-            this.lblBillNo.TabIndex = 2;
-            this.lblBillNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(498, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 22);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "INVOICE DATE";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblBillDate
+            // 
+            this.lblBillDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBillDate.AutoSize = true;
+            this.lblBillDate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBillDate.Location = new System.Drawing.Point(665, 5);
+            this.lblBillDate.Name = "lblBillDate";
+            this.lblBillDate.Size = new System.Drawing.Size(229, 23);
+            this.lblBillDate.TabIndex = 3;
+            this.lblBillDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel3
             // 
@@ -247,28 +247,133 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(897, 67);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // prdCombo
+            // lblStock
             // 
-            this.prdCombo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.prdCombo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prdCombo.FormattingEnabled = true;
-            this.prdCombo.Location = new System.Drawing.Point(3, 27);
-            this.prdCombo.Name = "prdCombo";
-            this.prdCombo.Size = new System.Drawing.Size(123, 30);
-            this.prdCombo.TabIndex = 17;
-            this.prdCombo.SelectedIndexChanged += new System.EventHandler(this.prdCombo_SelectedIndexChanged);
-            this.prdCombo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.prdCombo_KeyDown);
+            this.lblStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStock.AutoSize = true;
+            this.lblStock.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStock.Location = new System.Drawing.Point(609, 34);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(126, 22);
+            this.lblStock.TabIndex = 16;
+            this.lblStock.Text = "0";
+            this.lblStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TypeCombo
+            // txtQty
             // 
-            this.TypeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TypeCombo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TypeCombo.FormattingEnabled = true;
-            this.TypeCombo.Location = new System.Drawing.Point(277, 30);
-            this.TypeCombo.Name = "TypeCombo";
-            this.TypeCombo.Size = new System.Drawing.Size(110, 30);
-            this.TypeCombo.TabIndex = 15;
-            this.TypeCombo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TypeCombo_KeyDown);
+            this.txtQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtQty.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQty.Location = new System.Drawing.Point(492, 30);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(111, 30);
+            this.txtQty.TabIndex = 12;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
+            this.txtQty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQty_KeyDown);
+            // 
+            // txtRate
+            // 
+            this.txtRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRate.Enabled = false;
+            this.txtRate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRate.Location = new System.Drawing.Point(393, 30);
+            this.txtRate.Name = "txtRate";
+            this.txtRate.Size = new System.Drawing.Size(93, 30);
+            this.txtRate.TabIndex = 11;
+            this.txtRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRate_KeyDown);
+            // 
+            // txtCat
+            // 
+            this.txtCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCat.Enabled = false;
+            this.txtCat.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCat.Location = new System.Drawing.Point(132, 30);
+            this.txtCat.Name = "txtCat";
+            this.txtCat.Size = new System.Drawing.Size(139, 30);
+            this.txtCat.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 1);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 22);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "PRODUCT";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(132, 1);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 22);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "CATEGORY";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(492, 1);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 22);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "QTY";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(277, 1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(110, 22);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "TYPE";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(393, 1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 22);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "RATE";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(609, 1);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 22);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "STOCK";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(741, 1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(153, 22);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "ADD";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAdd
             // 
@@ -288,133 +393,28 @@
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             this.btnAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAdd_KeyDown);
             // 
-            // label12
+            // TypeCombo
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(741, 1);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(153, 22);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "ADD";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TypeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TypeCombo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypeCombo.FormattingEnabled = true;
+            this.TypeCombo.Location = new System.Drawing.Point(277, 30);
+            this.TypeCombo.Name = "TypeCombo";
+            this.TypeCombo.Size = new System.Drawing.Size(110, 30);
+            this.TypeCombo.TabIndex = 15;
+            this.TypeCombo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TypeCombo_KeyDown);
             // 
-            // label11
+            // prdCombo
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(609, 1);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 22);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "STOCK";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(393, 1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 22);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "RATE";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(277, 1);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 22);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "TYPE";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(492, 1);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 22);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "QTY";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(132, 1);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 22);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "CATEGORY";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 1);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 22);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "PRODUCT";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtCat
-            // 
-            this.txtCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCat.Enabled = false;
-            this.txtCat.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCat.Location = new System.Drawing.Point(132, 30);
-            this.txtCat.Name = "txtCat";
-            this.txtCat.Size = new System.Drawing.Size(139, 30);
-            this.txtCat.TabIndex = 9;
-            // 
-            // txtRate
-            // 
-            this.txtRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRate.Enabled = false;
-            this.txtRate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRate.Location = new System.Drawing.Point(393, 30);
-            this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(93, 30);
-            this.txtRate.TabIndex = 11;
-            this.txtRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRate_KeyDown);
-            // 
-            // txtQty
-            // 
-            this.txtQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtQty.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQty.Location = new System.Drawing.Point(492, 30);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(111, 30);
-            this.txtQty.TabIndex = 12;
-            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
-            this.txtQty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQty_KeyDown);
-            // 
-            // lblStock
-            // 
-            this.lblStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblStock.AutoSize = true;
-            this.lblStock.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(609, 34);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(126, 22);
-            this.lblStock.TabIndex = 16;
-            this.lblStock.Text = "0";
-            this.lblStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.prdCombo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prdCombo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prdCombo.FormattingEnabled = true;
+            this.prdCombo.Location = new System.Drawing.Point(3, 27);
+            this.prdCombo.Name = "prdCombo";
+            this.prdCombo.Size = new System.Drawing.Size(123, 30);
+            this.prdCombo.TabIndex = 17;
+            this.prdCombo.SelectedIndexChanged += new System.EventHandler(this.prdCombo_SelectedIndexChanged);
+            this.prdCombo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.prdCombo_KeyDown);
             // 
             // tableLayoutPanel4
             // 
@@ -463,65 +463,17 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(278, 209);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
-            // GrandTotal
+            // label14
             // 
-            this.GrandTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.GrandTotal.AutoSize = true;
-            this.GrandTotal.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrandTotal.Location = new System.Drawing.Point(157, 136);
-            this.GrandTotal.Name = "GrandTotal";
-            this.GrandTotal.Size = new System.Drawing.Size(118, 22);
-            this.GrandTotal.TabIndex = 11;
-            this.GrandTotal.Text = "0.00";
-            this.GrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblRoundOff
-            // 
-            this.lblRoundOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRoundOff.AutoSize = true;
-            this.lblRoundOff.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoundOff.Location = new System.Drawing.Point(157, 92);
-            this.lblRoundOff.Name = "lblRoundOff";
-            this.lblRoundOff.Size = new System.Drawing.Size(118, 22);
-            this.lblRoundOff.TabIndex = 10;
-            this.lblRoundOff.Text = "0";
-            this.lblRoundOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(157, 49);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(118, 22);
-            this.lblDiscount.TabIndex = 9;
-            this.lblDiscount.Text = "0";
-            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblGSt
-            // 
-            this.lblGSt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblGSt.AutoSize = true;
-            this.lblGSt.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGSt.Location = new System.Drawing.Point(157, 9);
-            this.lblGSt.Name = "lblGSt";
-            this.lblGSt.Size = new System.Drawing.Size(118, 22);
-            this.lblGSt.TabIndex = 8;
-            this.lblGSt.Text = "18%";
-            this.lblGSt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 92);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(148, 22);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "ROUND OFF";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 9);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(148, 22);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "GST";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
             // 
@@ -535,17 +487,17 @@
             this.label15.Text = "DISCOUNT";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label14
+            // label16
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 9);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 22);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "GST";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 92);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(148, 22);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "ROUND OFF";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label17
             // 
@@ -558,6 +510,54 @@
             this.label17.TabIndex = 6;
             this.label17.Text = "GRAND TOTAL";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblGSt
+            // 
+            this.lblGSt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGSt.AutoSize = true;
+            this.lblGSt.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGSt.Location = new System.Drawing.Point(157, 9);
+            this.lblGSt.Name = "lblGSt";
+            this.lblGSt.Size = new System.Drawing.Size(118, 22);
+            this.lblGSt.TabIndex = 8;
+            this.lblGSt.Text = "18%";
+            this.lblGSt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.Location = new System.Drawing.Point(157, 49);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(118, 22);
+            this.lblDiscount.TabIndex = 9;
+            this.lblDiscount.Text = "0";
+            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblRoundOff
+            // 
+            this.lblRoundOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRoundOff.AutoSize = true;
+            this.lblRoundOff.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoundOff.Location = new System.Drawing.Point(157, 92);
+            this.lblRoundOff.Name = "lblRoundOff";
+            this.lblRoundOff.Size = new System.Drawing.Size(118, 22);
+            this.lblRoundOff.TabIndex = 10;
+            this.lblRoundOff.Text = "0";
+            this.lblRoundOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // GrandTotal
+            // 
+            this.GrandTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrandTotal.AutoSize = true;
+            this.GrandTotal.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrandTotal.Location = new System.Drawing.Point(157, 136);
+            this.GrandTotal.Name = "GrandTotal";
+            this.GrandTotal.Size = new System.Drawing.Size(118, 22);
+            this.GrandTotal.TabIndex = 11;
+            this.GrandTotal.Text = "0.00";
+            this.GrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel6
             // 
@@ -576,28 +576,17 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(415, 71);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
-            // txtReceived
+            // label18
             // 
-            this.txtReceived.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtReceived.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceived.Location = new System.Drawing.Point(228, 3);
-            this.txtReceived.Name = "txtReceived";
-            this.txtReceived.Size = new System.Drawing.Size(184, 30);
-            this.txtReceived.TabIndex = 7;
-            this.txtReceived.TextChanged += new System.EventHandler(this.txtReceived_TextChanged);
-            this.txtReceived.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtReceived_KeyDown);
-            // 
-            // lblRemain
-            // 
-            this.lblRemain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRemain.AutoSize = true;
-            this.lblRemain.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemain.Location = new System.Drawing.Point(228, 42);
-            this.lblRemain.Name = "lblRemain";
-            this.lblRemain.Size = new System.Drawing.Size(184, 22);
-            this.lblRemain.TabIndex = 6;
-            this.lblRemain.Text = "0.00";
-            this.lblRemain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 6);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(219, 22);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "RECEIVED AMOUNT";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label19
             // 
@@ -611,17 +600,28 @@
             this.label19.Text = "REMAINING AMOUNT";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label18
+            // lblRemain
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 6);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(219, 22);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "RECEIVED AMOUNT";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRemain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRemain.AutoSize = true;
+            this.lblRemain.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemain.Location = new System.Drawing.Point(228, 42);
+            this.lblRemain.Name = "lblRemain";
+            this.lblRemain.Size = new System.Drawing.Size(184, 22);
+            this.lblRemain.TabIndex = 6;
+            this.lblRemain.Text = "0.00";
+            this.lblRemain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtReceived
+            // 
+            this.txtReceived.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtReceived.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceived.Location = new System.Drawing.Point(228, 3);
+            this.txtReceived.Name = "txtReceived";
+            this.txtReceived.Size = new System.Drawing.Size(184, 30);
+            this.txtReceived.TabIndex = 7;
+            this.txtReceived.TextChanged += new System.EventHandler(this.txtReceived_TextChanged);
+            this.txtReceived.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtReceived_KeyDown);
             // 
             // tableLayoutPanel7
             // 
@@ -637,26 +637,6 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(415, 42);
             this.tableLayoutPanel7.TabIndex = 8;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::Anugraha.Properties.Resources.if_free_09_463017;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(294, 3);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(118, 36);
-            this.btnCancel.TabIndex = 8;
-            this.btnCancel.Text = "CANCEL";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnPrint
             // 
@@ -677,6 +657,26 @@
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Image = global::Anugraha.Properties.Resources.if_free_09_463017;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(294, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(118, 36);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panel2
             // 

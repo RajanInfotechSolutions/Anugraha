@@ -146,12 +146,11 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 36);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(920, 634);
+            this.panel2.Size = new System.Drawing.Size(920, 621);
             this.panel2.TabIndex = 3;
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.vendorGrid, 0, 0);
@@ -159,19 +158,21 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(886, 274);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(886, 258);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // vendorGrid
             // 
+            this.vendorGrid.AllowUserToAddRows = false;
             this.vendorGrid.AllowUserToDeleteRows = false;
-            this.vendorGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.vendorGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.vendorGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vendorGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vendorGrid.Location = new System.Drawing.Point(3, 3);
             this.vendorGrid.Name = "vendorGrid";
             this.vendorGrid.ReadOnly = true;
             this.vendorGrid.RowTemplate.Height = 24;
-            this.vendorGrid.Size = new System.Drawing.Size(880, 268);
+            this.vendorGrid.Size = new System.Drawing.Size(880, 252);
             this.vendorGrid.TabIndex = 0;
             this.vendorGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vendorGrid_CellContentClick);
             // 
@@ -649,7 +650,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Anu_Vendor";
-            this.Size = new System.Drawing.Size(920, 670);
+            this.Size = new System.Drawing.Size(920, 657);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);

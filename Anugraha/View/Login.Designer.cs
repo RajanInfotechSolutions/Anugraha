@@ -163,6 +163,7 @@
             this.lnkSignup.TabStop = true;
             this.lnkSignup.Text = "Sign Up";
             this.lnkSignup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkSignup.Visible = false;
             // 
             // lnkForgot
             // 
@@ -179,6 +180,7 @@
             this.lnkForgot.TabStop = true;
             this.lnkForgot.Text = "Forgot Password";
             this.lnkForgot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkForgot.Visible = false;
             // 
             // tableLayoutPanel3
             // 

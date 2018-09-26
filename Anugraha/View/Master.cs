@@ -263,5 +263,24 @@ namespace Anugraha.View
                 nt.BringToFront();
             }
         }
+
+        private void dailySaleReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseOpeningForms();
+            if (!mainPanel.Controls.Contains(DailyReport.Instance))
+            {
+                mainPanel.Controls.Add(DailyReport.Instance);
+                DailyReport.Instance.Dock = DockStyle.Fill;
+                DailyReport.Instance.BringToFront();
+            }
+            else
+            {
+                CloseUserControl(DailyReport.Instance);
+                DailyReport nt = new DailyReport();
+                mainPanel.Controls.Add(nt);
+                nt.Dock = DockStyle.Fill;
+                nt.BringToFront();
+            }
+        }
     }
 }

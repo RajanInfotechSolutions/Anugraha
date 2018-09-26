@@ -306,7 +306,7 @@
             // 
             // categoryGrid
             // 
-            this.categoryGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -324,7 +324,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.categoryGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.categoryGrid.Location = new System.Drawing.Point(12, 22);
+            this.categoryGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryGrid.Location = new System.Drawing.Point(12, 19);
             this.categoryGrid.Name = "categoryGrid";
             this.categoryGrid.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -338,7 +339,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.categoryGrid.RowTemplate.Height = 24;
-            this.categoryGrid.Size = new System.Drawing.Size(875, 321);
+            this.categoryGrid.Size = new System.Drawing.Size(875, 327);
             this.categoryGrid.TabIndex = 0;
             this.categoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoryGrid_CellContentClick);
             // 
