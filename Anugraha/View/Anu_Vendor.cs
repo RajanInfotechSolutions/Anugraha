@@ -41,7 +41,7 @@ namespace Anugraha.View
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
             timer1.Start();
             txtVendorId.Text = "";
 
@@ -179,14 +179,14 @@ namespace Anugraha.View
             vendorGrid.Columns[0].Visible = false;
 
             vendorGrid.Columns[1].HeaderText = "VENDOR COMPANY";
-            vendorGrid.Columns[1].Width = 800;
+            //vendorGrid.Columns[1].Width = 800;
             vendorGrid.Columns[1].ToolTipText = "VENDOR COMPANY";
             vendorGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             vendorGrid.Columns[1].SortMode = DataGridViewColumnSortMode.Automatic;
 
             vendorGrid.Columns[2].HeaderText = "VENDOR NAME";
-            vendorGrid.Columns[2].Width = 800;
+            //vendorGrid.Columns[2].Width = 800;
             vendorGrid.Columns[2].ToolTipText = "VENDOR NAME";
             vendorGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -194,14 +194,14 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[3].HeaderText = "VENDOR ADDRESS";
-            vendorGrid.Columns[3].Width = 800;
+            //vendorGrid.Columns[3].Width = 800;
             vendorGrid.Columns[3].ToolTipText = "VENDOR ADDRESS";
             vendorGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             vendorGrid.Columns[3].SortMode = DataGridViewColumnSortMode.Automatic;
 
             vendorGrid.Columns[4].HeaderText = "VENDOR CITY";
-            vendorGrid.Columns[4].Width = 800;
+            //vendorGrid.Columns[4].Width = 800;
             vendorGrid.Columns[4].ToolTipText = "VENDOR CITY";
             vendorGrid.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -209,7 +209,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[5].HeaderText = "VENDOR STATE";
-            vendorGrid.Columns[5].Width = 800;
+            //vendorGrid.Columns[5].Width = 800;
             vendorGrid.Columns[5].ToolTipText = "VENDOR STATE";
             vendorGrid.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -217,7 +217,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[6].HeaderText = "VENDOR PINCODE";
-            vendorGrid.Columns[6].Width = 800;
+            //vendorGrid.Columns[6].Width = 800;
             vendorGrid.Columns[6].ToolTipText = "VENDOR PINCODE";
             vendorGrid.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -226,7 +226,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[7].HeaderText = "VENDOR LANDLINE";
-            vendorGrid.Columns[7].Width = 800;
+            //vendorGrid.Columns[7].Width = 800;
             vendorGrid.Columns[7].ToolTipText = "VENDOR LANDLINE";
             vendorGrid.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[7].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -234,7 +234,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[8].HeaderText = "VENDOR MOBILE";
-            vendorGrid.Columns[8].Width = 800;
+            //vendorGrid.Columns[8].Width = 800;
             vendorGrid.Columns[8].ToolTipText = "VENDOR MOBILE";
             vendorGrid.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[8].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -243,7 +243,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[9].HeaderText = "VENDOR EMAIL";
-            vendorGrid.Columns[9].Width = 800;
+            //vendorGrid.Columns[9].Width = 800;
             vendorGrid.Columns[9].ToolTipText = "VENDOR EMAIL";
             vendorGrid.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[9].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -251,7 +251,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[10].HeaderText = "VENDOR GST";
-            vendorGrid.Columns[10].Width = 800;
+            //vendorGrid.Columns[10].Width = 800;
             vendorGrid.Columns[10].ToolTipText = "VENDOR GST";
             vendorGrid.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[10].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -259,7 +259,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[11].HeaderText = "VENDOR BANK";
-            vendorGrid.Columns[11].Width = 800;
+            //vendorGrid.Columns[11].Width = 800;
             vendorGrid.Columns[11].ToolTipText = "VENDOR BANK";
             vendorGrid.Columns[11].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[11].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -267,7 +267,7 @@ namespace Anugraha.View
 
 
             vendorGrid.Columns[12].HeaderText = "VENDOR IFSC";
-            vendorGrid.Columns[12].Width = 800;
+            //vendorGrid.Columns[12].Width = 800;
             vendorGrid.Columns[12].ToolTipText = "VENDOR IFSC";
             vendorGrid.Columns[12].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             vendorGrid.Columns[12].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -392,7 +392,7 @@ namespace Anugraha.View
                         vend.Anu_Vendor_Company_ACNO = txtAC.Text.Trim().ToUpper();
                         vend.Anu_Vendor_Company_IFSC = txtIfsc.Text.Trim().ToUpper();
                         vend.Anu_Vendor_IsActive = true;
-                        vend.Anu_Vendor_CreatedBy = "Admin";
+                        vend.Anu_Vendor_CreatedBy = SessionMgr.UserId;
                         vend.Anu_Vendor_CreatedDate = DateTime.Now;
                         _context.Anu_Vendor_Detail.Add(vend);
                         _context.SaveChanges();
@@ -415,7 +415,7 @@ namespace Anugraha.View
                         cmd.Anu_Vendor_Company_ACNO = txtAC.Text.Trim().ToUpper();
                         cmd.Anu_Vendor_Company_IFSC = txtIfsc.Text.Trim().ToUpper();
                         cmd.Anu_Vendor_IsActive = true;
-                        cmd.Anu_Vendor_ModifiedBy = "Admin";
+                        cmd.Anu_Vendor_ModifiedBy = SessionMgr.UserId;
                         cmd.Anu_Vendor_ModifiedDate = DateTime.Now;
                         _context.SaveChanges();
                     }

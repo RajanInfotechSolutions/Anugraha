@@ -45,7 +45,7 @@ namespace Anugraha.View
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
             txtsrc.Focus();
 
             TypeCombo.DisplayMember = "Text";
@@ -299,7 +299,7 @@ namespace Anugraha.View
                     pur.Anu_Purchase_Amount = TotalAmount;
                     pur.Status = Status.UnPaid;
                     pur.Anu_Purchase_IsActive = true;
-                    pur.Anu_Purchase_CreatedBy = "Admin";
+                    pur.Anu_Purchase_CreatedBy =  SessionMgr.UserId;
                     pur.Anu_Purchase_CreatedDate = DateTime.Now;
                     _context.Anu_Purchases.Add(pur);
                     _context.SaveChanges();

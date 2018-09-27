@@ -11,10 +11,10 @@ namespace Anugraha.Model
     public class Anu_Company_Detail
     {
 
-        public Anu_Company_Detail()
-        {
-            this.user = new HashSet<Anu_User>();
-        }
+        //public Anu_Company_Detail()
+        //{
+        //    this.user = new HashSet<Anu_User>();
+        //}
 
 
         [Key]
@@ -36,6 +36,6 @@ namespace Anugraha.Model
         public string Anu_Company_ModifiedBy { get; set; }
         public DateTime? Anu_Company_ModifiedDate { get; set; }
 
-        public virtual ICollection<Anu_User> user { get; set; }
+        //public virtual ICollection<Anu_User> user { get; set; }
     }
 }

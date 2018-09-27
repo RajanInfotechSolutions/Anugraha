@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TypeCombo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -179,17 +180,19 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnCount = 6;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.10328F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.89672F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
-            this.tableLayoutPanel3.Controls.Add(this.btnSave, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblName, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txtQty, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnAdd, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.listCombo, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnSave, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnAdd, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtQty, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.TypeCombo, 2, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 52);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
@@ -219,7 +222,7 @@
             this.lblName.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(3, 12);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(203, 22);
+            this.lblName.Size = new System.Drawing.Size(193, 22);
             this.lblName.TabIndex = 2;
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -227,9 +230,9 @@
             // 
             this.txtQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtQty.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQty.Location = new System.Drawing.Point(446, 8);
+            this.txtQty.Location = new System.Drawing.Point(543, 8);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(234, 30);
+            this.txtQty.Size = new System.Drawing.Size(117, 30);
             this.txtQty.TabIndex = 3;
             // 
             // btnAdd
@@ -238,9 +241,9 @@
             this.btnAdd.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = global::Anugraha.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(686, 3);
+            this.btnAdd.Location = new System.Drawing.Point(666, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(99, 41);
+            this.btnAdd.Size = new System.Drawing.Size(119, 41);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -252,9 +255,9 @@
             this.listCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listCombo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listCombo.FormattingEnabled = true;
-            this.listCombo.Location = new System.Drawing.Point(212, 8);
+            this.listCombo.Location = new System.Drawing.Point(202, 8);
             this.listCombo.Name = "listCombo";
-            this.listCombo.Size = new System.Drawing.Size(228, 30);
+            this.listCombo.Size = new System.Drawing.Size(218, 30);
             this.listCombo.TabIndex = 5;
             this.listCombo.SelectedIndexChanged += new System.EventHandler(this.listCombo_SelectedIndexChanged);
             // 
@@ -301,6 +304,16 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // TypeCombo
+            // 
+            this.TypeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TypeCombo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypeCombo.FormattingEnabled = true;
+            this.TypeCombo.Location = new System.Drawing.Point(426, 11);
+            this.TypeCombo.Name = "TypeCombo";
+            this.TypeCombo.Size = new System.Drawing.Size(111, 30);
+            this.TypeCombo.TabIndex = 7;
+            // 
             // Anu_Stock_Entry
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -344,5 +357,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox TypeCombo;
     }
 }

@@ -37,24 +37,19 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.MidPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.lnkSignup = new System.Windows.Forms.LinkLabel();
-            this.lnkForgot = new System.Windows.Forms.LinkLabel();
+            this.lnkbutton = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.topPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.MidPanel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -120,11 +115,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MidPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.MidPanel.BackgroundImage = global::Anugraha.Properties.Resources.p05w5tk2;
+            this.MidPanel.BackgroundImage = global::Anugraha.Properties.Resources.bg1;
             this.MidPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MidPanel.Controls.Add(this.tableLayoutPanel4);
             this.MidPanel.Controls.Add(this.tableLayoutPanel3);
-            this.MidPanel.Controls.Add(this.tableLayoutPanel2);
             this.MidPanel.Location = new System.Drawing.Point(0, 44);
             this.MidPanel.Name = "MidPanel";
             this.MidPanel.Size = new System.Drawing.Size(1006, 676);
@@ -135,52 +129,32 @@
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel4.ColumnCount = 4;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.15284F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.84716F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.68862F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.31138F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel4.Controls.Add(this.lnkSignup, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lnkForgot, 2, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(8, 379);
+            this.tableLayoutPanel4.Controls.Add(this.lnkbutton, 2, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(278, 422);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(982, 35);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(622, 35);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // lnkSignup
+            // lnkbutton
             // 
-            this.lnkSignup.ActiveLinkColor = System.Drawing.Color.White;
-            this.lnkSignup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkSignup.AutoSize = true;
-            this.lnkSignup.Font = new System.Drawing.Font("High Tower Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkSignup.ForeColor = System.Drawing.Color.Black;
-            this.lnkSignup.LinkColor = System.Drawing.Color.White;
-            this.lnkSignup.Location = new System.Drawing.Point(594, 3);
-            this.lnkSignup.Name = "lnkSignup";
-            this.lnkSignup.Size = new System.Drawing.Size(97, 28);
-            this.lnkSignup.TabIndex = 0;
-            this.lnkSignup.TabStop = true;
-            this.lnkSignup.Text = "Sign Up";
-            this.lnkSignup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnkSignup.Visible = false;
-            // 
-            // lnkForgot
-            // 
-            this.lnkForgot.ActiveLinkColor = System.Drawing.Color.White;
-            this.lnkForgot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkForgot.AutoSize = true;
-            this.lnkForgot.Font = new System.Drawing.Font("High Tower Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkForgot.ForeColor = System.Drawing.Color.Black;
-            this.lnkForgot.LinkColor = System.Drawing.Color.White;
-            this.lnkForgot.Location = new System.Drawing.Point(697, 3);
-            this.lnkForgot.Name = "lnkForgot";
-            this.lnkForgot.Size = new System.Drawing.Size(178, 28);
-            this.lnkForgot.TabIndex = 1;
-            this.lnkForgot.TabStop = true;
-            this.lnkForgot.Text = "Forgot Password";
-            this.lnkForgot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnkForgot.Visible = false;
+            this.lnkbutton.ActiveLinkColor = System.Drawing.Color.White;
+            this.lnkbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkbutton.AutoSize = true;
+            this.lnkbutton.Font = new System.Drawing.Font("High Tower Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkbutton.ForeColor = System.Drawing.Color.Black;
+            this.lnkbutton.LinkColor = System.Drawing.Color.Red;
+            this.lnkbutton.Location = new System.Drawing.Point(337, 3);
+            this.lnkbutton.Name = "lnkbutton";
+            this.lnkbutton.Size = new System.Drawing.Size(178, 28);
+            this.lnkbutton.TabIndex = 1;
+            this.lnkbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkbutton.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkbutton_LinkClicked);
             // 
             // tableLayoutPanel3
             // 
@@ -197,7 +171,7 @@
             this.tableLayoutPanel3.Controls.Add(this.txtUserName, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtPassword, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnLogin, 3, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(12, 229);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(24, 269);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.53271F));
@@ -247,12 +221,17 @@
             this.txtPassword.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(595, 64);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(281, 31);
             this.txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.BackColor = System.Drawing.Color.Red;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
@@ -263,39 +242,8 @@
             this.btnLogin.Size = new System.Drawing.Size(281, 34);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.031992F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.96801F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 6);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.70629F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(982, 217);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Anugraha.Properties.Resources.Banner;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(953, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -322,8 +270,6 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,8 +280,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblBilling;
         private System.Windows.Forms.Panel MidPanel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -343,8 +287,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.LinkLabel lnkSignup;
-        private System.Windows.Forms.LinkLabel lnkForgot;
+        private System.Windows.Forms.LinkLabel lnkbutton;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }

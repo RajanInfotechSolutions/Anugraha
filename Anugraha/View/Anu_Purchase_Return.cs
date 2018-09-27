@@ -30,13 +30,18 @@ namespace Anugraha.View
             InitializeComponent();
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Start();
             label1.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -10,22 +10,22 @@ namespace Anugraha.Model
 {
     public class Anu_Log_History
     {
-        public Anu_Log_History()
-        {
-            this.user = new HashSet<Anu_User>();
-        }
+        //public Anu_Log_History()
+        //{
+        //    this.user = new HashSet<Anu_User>();
+        //}
 
 
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Anu_LogID { get; set; }
         public DateTime Anu_LAST_LOGGED_In { get; set; }
-        public DateTime Anu_LAST_LOGGED_Out { get; set; }
+        public DateTime? Anu_LAST_LOGGED_Out { get; set; }
         public DateTime CreatedDate { get; set; }
         public string CreatedBy { get; set; }
 
 
-        public virtual ICollection<Anu_User> user { get; set; }
+        //public virtual ICollection<Anu_User> user { get; set; }
 
 
 

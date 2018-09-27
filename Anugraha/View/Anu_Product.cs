@@ -38,7 +38,7 @@ namespace Anugraha.View
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
             GridData();
 
             CategoryCombo.DataSource = _context.Anu_Category_Details.Where(a => a.Anu_Category_IsActive == true).ToList();
@@ -116,14 +116,14 @@ namespace Anugraha.View
             productGrid.Columns[0].Visible = false;
 
             productGrid.Columns[1].HeaderText = "CATEGORY NAME";
-            productGrid.Columns[1].Width = 800;
+            //productGrid.Columns[1].Width = 800;
             productGrid.Columns[1].ToolTipText = "CATEGORY NAME";
             productGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             productGrid.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             productGrid.Columns[1].SortMode = DataGridViewColumnSortMode.Automatic;
 
             productGrid.Columns[2].HeaderText = "PRODUCT CODE";
-            productGrid.Columns[2].Width = 800;
+            //productGrid.Columns[2].Width = 800;
             productGrid.Columns[2].ToolTipText = "PRODUCT CODE";
             productGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             productGrid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -131,14 +131,14 @@ namespace Anugraha.View
 
 
             productGrid.Columns[3].HeaderText = "PRODUCT NAME";
-            productGrid.Columns[3].Width = 800;
+            //productGrid.Columns[3].Width = 800;
             productGrid.Columns[3].ToolTipText = "PRODUCT NAME";
             productGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             productGrid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             productGrid.Columns[3].SortMode = DataGridViewColumnSortMode.Automatic;
 
             productGrid.Columns[4].HeaderText = "PRODUCT TYPE";
-            productGrid.Columns[4].Width = 800;
+            //productGrid.Columns[4].Width = 800;
             productGrid.Columns[4].ToolTipText = "PRODUCT TYPE";
             productGrid.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             productGrid.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -146,7 +146,7 @@ namespace Anugraha.View
 
 
             productGrid.Columns[5].HeaderText = "PRODUCT RATE";
-            productGrid.Columns[5].Width = 800;
+            //productGrid.Columns[5].Width = 800;
             productGrid.Columns[5].ToolTipText = "PRODUCT RATE";
             productGrid.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             productGrid.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -318,7 +318,7 @@ namespace Anugraha.View
                             prd.type = Model.Type.LR;
                         }
                         prd.Anu_Product_IsActive = true;
-                        prd.Anu_Product_CreatedBy = "Admin";
+                        prd.Anu_Product_CreatedBy = SessionMgr.UserId;
                         prd.Anu_Product_CreatedDate = DateTime.Now;
                         _context.Products.Add(prd);
                         _context.SaveChanges();

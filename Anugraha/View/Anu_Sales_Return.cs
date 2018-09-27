@@ -28,7 +28,7 @@ namespace Anugraha.View
             InitializeComponent();
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

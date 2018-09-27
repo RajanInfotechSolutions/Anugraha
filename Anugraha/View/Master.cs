@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Anugraha.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Anugraha.View
 {
     public partial class Master : Form
     {
+
+        ApplicationDbContext _context = new ApplicationDbContext();
         public Master()
         {
             InitializeComponent();
@@ -25,7 +28,17 @@ namespace Anugraha.View
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var userid = SessionMgr.UserId;
+            var user = _context.Anu_Users.Where(a => a.Anu_USERNAME == userid).SingleOrDefault();
+            if(user != null)
+            {
+                var log = _context.Anu_Log_Histories.Where(a => a.Anu_LogID == user.Anu_LogID).SingleOrDefault();
+                log.Anu_LAST_LOGGED_Out = DateTime.Now;
+                log.CreatedBy = SessionMgr.UserId;
+                log.CreatedDate = DateTime.Now;
+                _context.SaveChanges();
+                Application.Exit();
+            }
         }
 
 

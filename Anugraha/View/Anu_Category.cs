@@ -42,7 +42,7 @@ namespace Anugraha.View
             GridData();
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome"+ SessionMgr.UserId;
            
 
             var catcode = "";
@@ -239,7 +239,7 @@ namespace Anugraha.View
                         cat.Anu_Category_Code = txtcatCode.Text.Trim().ToUpper();
                         cat.Anu_Category_Name = txtcatName.Text.Trim().ToUpper();
                         cat.Anu_Category_IsActive = true;
-                        cat.Anu_Category_CreatedBy = "Admin";
+                        cat.Anu_Category_CreatedBy = SessionMgr.UserId;
                         cat.Anu_Category_CreatedDate = DateTime.Now;
                         _context.Anu_Category_Details.Add(cat);
                         _context.SaveChanges();
@@ -251,7 +251,7 @@ namespace Anugraha.View
                     {
                         var cid = _context.Anu_Category_Details.Where(a => a.Anu_Category_IsActive == true && a.Anu_Category_Id == txtCateoryId.Text.Trim()).SingleOrDefault();
                         cid.Anu_Category_Name = txtcatName.Text.Trim().ToUpper();
-                        cid.Anu_Category_ModifiedBy = "Admin";
+                        cid.Anu_Category_ModifiedBy = SessionMgr.UserId;
                         cid.Anu_Category_ModifiedDate = DateTime.Now;
                         _context.SaveChanges();
                         Init();

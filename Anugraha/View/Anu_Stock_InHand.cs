@@ -39,7 +39,7 @@ namespace Anugraha.View
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
 
             var grd = from a in _context.Anu_Stocks.Include(vv => vv.product)
                       select new

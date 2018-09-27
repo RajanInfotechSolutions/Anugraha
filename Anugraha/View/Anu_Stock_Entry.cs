@@ -40,7 +40,7 @@ namespace Anugraha.View
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
             txtQty.Visible = false;
 
             comboBox1.DisplayMember = "Text";
@@ -59,6 +59,27 @@ namespace Anugraha.View
             comboBox1.SelectedIndex = 0;
 
             prdgrid.Visible = false;
+
+            TypeCombo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            TypeCombo.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            TypeCombo.DisplayMember = "Text";
+            TypeCombo.ValueMember = "Value";
+
+
+            var item = new[]
+            {
+
+                 new {Text = "SP", Value="0"},
+                new {Text = "GM", Value="1"},
+                new {Text = "KG", Value="2"},
+                new {Text = "LR", Value="3"}
+
+            };
+
+            TypeCombo.DataSource = item;
+
+            TypeCombo.SelectedIndex = 0;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -164,7 +185,22 @@ namespace Anugraha.View
                             Anu_Purchase_Cart crt = new Anu_Purchase_Cart();
                             crt.Anu_Product_Id = item.ProductId;
                             crt.Qty = Convert.ToInt32(item.Quantity);
-                            crt.Anu_Cart_type = Model.Type.KG;
+                            if (TypeCombo.SelectedValue.ToString() == "0")
+                            {
+                                crt.Anu_Cart_type = Model.Type.SP;
+                            }
+                            else if (TypeCombo.SelectedValue.ToString() == "1")
+                            {
+                                crt.Anu_Cart_type = Model.Type.GM;
+                            }
+                            else if (TypeCombo.SelectedValue.ToString() == "2")
+                            {
+                                crt.Anu_Cart_type = Model.Type.KG;
+                            }
+                            else
+                            {
+                                crt.Anu_Cart_type = Model.Type.LR;
+                            }
                             crt.Rate = Convert.ToDecimal("0.00");
                             _context.Anu_Purchase_Cart.Add(crt);
                             _context.SaveChanges();
@@ -243,7 +279,7 @@ namespace Anugraha.View
 
 
                         var st = _context.Anu_Stock_Detail.Where(a => a.Anu_Stock_Detail_Id == IsHave.Anu_StockId).SingleOrDefault();
-                        st.ModifiedBy = "Admin";
+                        st.ModifiedBy =  SessionMgr.UserId;
                         st.ModifiedDate = DateTime.Now;
                     }
                     else
@@ -252,13 +288,14 @@ namespace Anugraha.View
                         stock.Anu_Product_Id = item.Anu_Product_Id;
                         stock.Anu_Stock_Product_Code = item.prdouct.Anu_Product_Code;
                         stock.Anu_Stock_Qty = item.Qty;
+                        stock.Anu_Stock_Type = item.Anu_Cart_type;
                         _context.Anu_Stocks.Add(stock);
                         _context.SaveChanges();
                         id = stock.Anu_StockId;
 
                         Anu_Stock_Detail details = new Anu_Stock_Detail();
                         details.Anu_StockId = id;
-                        details.CreatedBy = "Admin";
+                        details.CreatedBy = SessionMgr.UserId;
                         details.CreatedDate = DateTime.Now;
                         _context.Anu_Stock_Detail.Add(details);
                         _context.SaveChanges();

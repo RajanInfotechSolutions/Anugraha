@@ -186,7 +186,7 @@
             this.tableLayoutPanel8.Controls.Add(this.lblamount, 5, 0);
             this.tableLayoutPanel8.Controls.Add(this.label15, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.lblQty, 3, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(14, 562);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(14, 523);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -301,7 +301,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(883, 204);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(883, 163);
             this.tableLayoutPanel7.TabIndex = 5;
             // 
             // cartGrd
@@ -315,7 +315,7 @@
             this.cartGrd.Name = "cartGrd";
             this.cartGrd.ReadOnly = true;
             this.cartGrd.RowTemplate.Height = 24;
-            this.cartGrd.Size = new System.Drawing.Size(877, 198);
+            this.cartGrd.Size = new System.Drawing.Size(877, 157);
             this.cartGrd.TabIndex = 0;
             // 
             // tableLayoutPanel5

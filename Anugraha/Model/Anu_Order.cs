@@ -18,6 +18,7 @@ namespace Anugraha.Model
         public DateTime Anu_Order_OrderDate { get; set; }
         public decimal Anu_Order_TotalAmount { get; set; }
         public int Anu_Order_TotalQty { get; set; }
+        public int Anu_Order_URNNo { get; set; }
         public Mode Anu_Order_Mode { get; set; }
         public Status Anu_Order_Status { get; set; }
         public bool Anu_Order_IsActive { get; set; }

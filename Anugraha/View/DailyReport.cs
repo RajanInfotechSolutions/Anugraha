@@ -37,7 +37,7 @@ namespace Anugraha.View
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome" + SessionMgr.UserId;
 
             DateTime StartDate = dateTimePicker1.Value.Date;
             DateTime EndDate = dateTimePicker1.Value.Date.AddDays(1).AddTicks(-1);
@@ -54,8 +54,18 @@ namespace Anugraha.View
 
             dsrgrid.DataSource = grd.OrderBy(a=>a.InvoiceNo).ToList();
 
-            var amt = _context.Anu_Orders.Where(a => a.Anu_Order_CreatedDate > StartDate && a.Anu_Order_CreatedDate <= EndDate && a.Anu_Order_IsActive == true && a.Anu_Order_IsActive == true && a.Anu_Order_Status == Model.Status.Paid).Sum(a => a.Anu_Order_TotalAmount);
-            lblTotal.Text = Convert.ToDecimal(amt).ToString();
+            var today = _context.Anu_Orders.Where(a => a.Anu_Order_CreatedDate > StartDate && a.Anu_Order_CreatedDate <= EndDate && a.Anu_Order_IsActive == true && a.Anu_Order_IsActive == true && a.Anu_Order_Status == Model.Status.Paid).Count();
+            if(today != 0)
+            {
+
+                var amt = _context.Anu_Orders.Where(a => a.Anu_Order_CreatedDate > StartDate && a.Anu_Order_CreatedDate <= EndDate && a.Anu_Order_IsActive == true && a.Anu_Order_IsActive == true && a.Anu_Order_Status == Model.Status.Paid).Sum(a => a.Anu_Order_TotalAmount);
+                lblTotal.Text = Convert.ToDecimal(amt).ToString();
+            }
+            else
+            {
+                lblTotal.Text = "0.00";
+            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

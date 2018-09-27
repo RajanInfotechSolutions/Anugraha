@@ -21,6 +21,7 @@ namespace Anugraha.Model
         public string Anu_Product_Id { get; set; }
         public string Anu_Stock_Product_Code { get; set; }
         public decimal Anu_Stock_Qty { get; set; }
+        public Type Anu_Stock_Type { get; set; }
 
         [ForeignKey("Anu_Product_Id")]
         public virtual Product product { get; set; }

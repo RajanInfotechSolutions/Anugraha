@@ -158,7 +158,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(886, 258);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(886, 227);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // vendorGrid
@@ -172,7 +172,7 @@
             this.vendorGrid.Name = "vendorGrid";
             this.vendorGrid.ReadOnly = true;
             this.vendorGrid.RowTemplate.Height = 24;
-            this.vendorGrid.Size = new System.Drawing.Size(880, 252);
+            this.vendorGrid.Size = new System.Drawing.Size(880, 221);
             this.vendorGrid.TabIndex = 0;
             this.vendorGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vendorGrid_CellContentClick);
             // 

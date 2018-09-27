@@ -352,7 +352,7 @@
             // 
             this.CategoryCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoryCombo.FormattingEnabled = true;
-            this.CategoryCombo.Location = new System.Drawing.Point(176, 8);
+            this.CategoryCombo.Location = new System.Drawing.Point(176, 11);
             this.CategoryCombo.Name = "CategoryCombo";
             this.CategoryCombo.Size = new System.Drawing.Size(262, 30);
             this.CategoryCombo.TabIndex = 10;
@@ -361,7 +361,7 @@
             // 
             this.TypeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.TypeCombo.FormattingEnabled = true;
-            this.TypeCombo.Location = new System.Drawing.Point(176, 99);
+            this.TypeCombo.Location = new System.Drawing.Point(176, 101);
             this.TypeCombo.Name = "TypeCombo";
             this.TypeCombo.Size = new System.Drawing.Size(262, 30);
             this.TypeCombo.TabIndex = 11;

@@ -39,7 +39,7 @@ namespace Anugraha.View
             btnSave.Visible = false;
             txtCompanyName.Focus();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            lblUserName.Text = "Welcome Admin";
+            lblUserName.Text = "Welcome "+ SessionMgr.UserId;
             var comdetail = _context.Anu_Company_Details.Where(a => a.Anu_Company_IsActive == true && a.Anu_Company_Id != 0).SingleOrDefault();
             if (comdetail != null)
             {
@@ -401,23 +401,6 @@ namespace Anugraha.View
 
                         var IsHave = _context.Anu_Company_Details.Where(a => a.Anu_Company_IsActive == true && a.Anu_Company_Id != 0).Count();
 
-                        //int companyId;
-                        //if (IsHave != 0)
-                        //{
-                        //    long urn = 1;
-                        //    var MaxURN = (from a in _context.Anu_Company_Details.Where(a => a.Anu_Company_IsActive == true) select a).AsEnumerable().Max(p => p.Anu_Company_Id);
-                        //    if (MaxURN != 0)
-                        //    {
-                        //        urn = Convert.ToInt64(MaxURN) + 1;
-                        //    }
-                        //    companyId = Convert.ToInt32(urn.ToString("0000"));
-                        //}
-                        //else
-                        //{
-                        //    long urn = 1;
-                        //    companyId = Convert.ToInt32(urn.ToString("0000"));
-                        //}
-
                         Anu_Company_Detail comp = new Anu_Company_Detail();
                         //comp.Anu_Company_Id = companyId;
                         comp.Anu_Company_Name = txtCompanyName.Text.Trim().ToUpper();
@@ -431,7 +414,7 @@ namespace Anugraha.View
                         comp.Anu_Company_Landline = txtLand.Text.Trim().ToUpper();
                         comp.Anu_Company_Email = txtEmail.Text.Trim().ToUpper();
                         comp.Anu_Company_IsActive = true;
-                        comp.Anu_Company_CreatedBy = "Admin";
+                        comp.Anu_Company_CreatedBy = SessionMgr.UserId;
                         comp.Anu_Company_CreatedDate = DateTime.Now;
                         _context.Anu_Company_Details.Add(comp);
                         _context.SaveChanges();
